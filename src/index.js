@@ -24,7 +24,7 @@ customElements.define("video-element", class VideoElement extends LitElement {
     connectedCallback() {
         super.connectedCallback();
 
-        this.videoEle.src = "./assets/brb_1.mov";
+        this.videoEle.src = window.movieFiles[0];
         this.videoEle.muted = true;
         this.videoEle.loop = true;
         this.videoEle.oncanplay = () => {

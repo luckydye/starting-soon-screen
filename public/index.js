@@ -8,6 +8,6 @@
                 width: 100%;
                 height: 100%;
             }
-        `}constructor(){super(),this.videoEle=document.createElement("video")}connectedCallback(){super.connectedCallback(),this.videoEle.src="./assets/brb_1.mov",this.videoEle.muted=!0,this.videoEle.loop=!0,this.videoEle.oncanplay=()=>{this.videoEle.play()}}render(){return M`
+        `}constructor(){super(),this.videoEle=document.createElement("video")}connectedCallback(){super.connectedCallback(),this.videoEle.src=window.movieFiles[0],this.videoEle.muted=!0,this.videoEle.loop=!0,this.videoEle.oncanplay=()=>{this.videoEle.play()}}render(){return M`
             ${this.videoEle}
         `}}),window.addEventListener("contextmenu",(t=>t.preventDefault()))})();

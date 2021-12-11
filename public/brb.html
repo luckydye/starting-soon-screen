@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Right Back</title>
+
+    <style>
+        body {
+            background: black;
+            color: #eee;
+        }
+        
+        video-element {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            animation: blur-in 4s ease;
+        }
+
+        @keyframes blur-in {
+            from { filter: blur(24px) contrast(1.2);  }
+            to {}
+        }
+    </style>
+
+    <script>
+        window.movieFiles = ["./assets/brb_1.mov"];
+    </script>
+</head>
+<body>
+    
+    <video-element></video-element>
+    
+    <script src="./index.js" type="module"></script>
+
+</body>
+</html>
