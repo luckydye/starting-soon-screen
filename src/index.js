@@ -1,5 +1,7 @@
 import { LitElement, html, css } from "lit";
 
+// TODO: Make a file selection overlay on mouse over
+
 customElements.define("video-element", class VideoElement extends LitElement {
 
     static get styles() {
