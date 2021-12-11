@@ -5,7 +5,7 @@ customElements.define("video-element", class VideoElement extends LitElement {
     static get styles() {
         return css`
             :host {
-                
+                pointer-events: none;
             }
 
             video {
@@ -26,6 +26,7 @@ customElements.define("video-element", class VideoElement extends LitElement {
 
         this.videoEle.src = "./assets/brb_1.mov";
         this.videoEle.muted = true;
+        this.videoEle.loop = true;
         this.videoEle.oncanplay = () => {
             this.videoEle.play();
         }
@@ -38,3 +39,5 @@ customElements.define("video-element", class VideoElement extends LitElement {
     }
 
 });
+
+window.addEventListener('contextmenu', e => e.preventDefault());
