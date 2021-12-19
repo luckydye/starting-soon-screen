@@ -11,6 +11,11 @@
             background: black;
             color: #eee;
         }
+
+        @keyframes blur-in {
+            from { filter: blur(24px) contrast(1.2);  }
+            to {}
+        }
         
         video-element {
             position: fixed;
@@ -21,23 +26,35 @@
             animation: blur-in 4s ease;
         }
 
-        @keyframes blur-in {
-            from { filter: blur(24px) contrast(1.2);  }
-            to {}
+        iframe {
+            animation: blur-in 4s ease;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            z-index: 10000;
+            will-change: transform;
+            transition: transform 0.1s ease;
+            opacity: 0.8;
         }
     </style>
 
     <script>
         window.movieFiles = [
-            "../assets/ss_1.mov"
+            "../assets/ss_1"
         ];
     </script>
 </head>
 <body>
-    
-    <video-element></video-element>
-    
-    <script src="../index.js" type="module"></script>
 
+    <main>
+        <iframe src="https://streamelements.com/overlay/61bf75f9df5e28e6a4cb32a4/dRwlk3xkuokzauZOVwCdfr8QybIKLwANY3x0LZv2JDfqcyuz" allowtransparency="true"></iframe>
+        <video-element></video-element>
+    </main>
+
+    <script src="../index.js" type="module"></script>
 </body>
 </html>
