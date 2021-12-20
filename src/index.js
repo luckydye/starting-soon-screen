@@ -75,7 +75,7 @@ window.addEventListener("DOMContentLoaded", async e => {
     const iframe = document.querySelector("iframe");
     const video = document.querySelector("video-element").videoEle;
 
-    pin(iframe, keyframes, [-605, -484.5], video, 0.9);
+    pin(iframe, keyframes, [-570, -418], video, 1);
 });
 
 function pin(target, keyframes, offset = [0, 0], sync, scale = 1) {
