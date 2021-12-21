@@ -1,0 +1,49 @@
+:root {
+    --width: 1280px;
+    --height: 720px;
+}
+
+body {
+    background: black;
+    color: #eee;
+}
+
+@keyframes blur-in {
+    from { filter: blur(24px) contrast(1.2);  }
+    to {}
+}
+
+video-element {
+    width: 100%;
+    height: 100%;
+    animation: blur-in 4s ease;
+}
+
+iframe {
+    background: transparent;
+    border: none;
+    will-change: transform;
+    transition: transform 0.05s ease;
+}
+
+main {
+    width: var(--width);
+    height: var(--height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.overlay {
+    width: var(--width);
+    height: var(--height);
+    z-index: 10000;
+    opacity: 0.8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: scale(0.67);
+    transform-origin: 0 0;
+    filter: blur(1px);
+}

@@ -6,41 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starting Soon</title>
 
-    <style>
-        body {
-            background: black;
-            color: #eee;
-        }
-
-        @keyframes blur-in {
-            from { filter: blur(24px) contrast(1.2);  }
-            to {}
-        }
-        
-        video-element {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            animation: blur-in 4s ease;
-        }
-
-        iframe {
-            animation: blur-in 4s ease;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: transparent;
-            border: none;
-            z-index: 10000;
-            will-change: transform;
-            transition: transform 0.1s ease;
-            opacity: 0.8;
-        }
-    </style>
+    <link rel="stylesheet" href="../main.css">
 
     <script>
         window.movieFiles = [
@@ -51,7 +17,9 @@
 <body>
 
     <main>
-        <iframe src="https://streamelements.com/overlay/61c0d05a4a454200f70c9240/Wj-BbHn9mArgNwiRNKDZ5Fvgoc5-XM8h2-VjY0aTSGcMPZtd" allowtransparency="true"></iframe>
+        <div class="overlay">
+            <iframe width="1920" height="1080" src="https://streamelements.com/overlay/61c0d05a4a454200f70c9240/Wj-BbHn9mArgNwiRNKDZ5Fvgoc5-XM8h2-VjY0aTSGcMPZtd" allowtransparency="true"></iframe>
+        </div>
         <video-element></video-element>
     </main>
 
