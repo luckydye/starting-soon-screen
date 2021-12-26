@@ -91,9 +91,9 @@ function pin(target, keyframes, offset = [0, 0], sync, scale = 1) {
         const delta = ms - lastFrame;
         acc += delta;
 
-        while(acc >= 1000 / fps) {
+        if(acc >= 1000 / fps) {
             frame++;
-            acc -= 1000 / fps;
+            acc = 0;
 
             if(frame > keyframes.length) {
                 frame = 0;
@@ -108,7 +108,7 @@ function pin(target, keyframes, offset = [0, 0], sync, scale = 1) {
         }
 
         lastFrame = ms;
-        requestAnimationFrame(loop);
+        setTimeout(() => loop(Date.now()), 1000 / 12);
     };
 
     loop();

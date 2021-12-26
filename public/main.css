@@ -23,7 +23,7 @@ iframe {
     background: transparent;
     border: none;
     will-change: transform;
-    transition: transform 0.05s ease;
+    transition: transform 0.12s ease;
 }
 
 main {
